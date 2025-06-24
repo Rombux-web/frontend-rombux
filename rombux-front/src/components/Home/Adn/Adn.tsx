@@ -19,7 +19,7 @@ export default function Adn() {
             </p>
             <div className="relative w-[1708px] h-[691px] mx-auto">
                 <div className="absolute top-[15px] left-1/2 transform -translate-x-1/2 ">
-                    <Link href="/about_us">
+                    <Link href="/aboutUs">
                         <button
                             type="submit"
                             className="bg-[#D81FB9] text-white text-[32px] font-bold h-[72px] w-[306px] rounded-[50px] shadow-2xl cursor-pointer"

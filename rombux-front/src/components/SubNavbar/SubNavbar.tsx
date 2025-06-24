@@ -11,7 +11,7 @@ export default function SubNavbar() {
         { label: 'Branding', path: '/branding' },
         { label: 'Marketing Digital', path: '/marketing' },
         { label: 'Growth', path: '/growth' },
-        { label: 'Data + IA', path: '/data' },
+        { label: 'Data + IA', path: '/dataIA' },
     ];
 
     return (
@@ -32,9 +32,6 @@ export default function SubNavbar() {
                                 <span className="invisible font-bold">{label}</span>
                             </span>
                         </Link>
-
-
-
                     );
                 })}
             </div>
