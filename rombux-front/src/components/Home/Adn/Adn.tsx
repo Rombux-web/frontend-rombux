@@ -33,14 +33,14 @@ export default function Adn() {
                     alt="Esfera Izquierda"
                     width={541}
                     height={541}
-                    className="absolute top-[150px] left-0 object-contain"
+                    className="absolute top-[150px] left-0 object-contain animate-spin [animation-duration:150s]"
                 />
                 <Image
                     src="/group182.png"
                     alt="Esfera Derecha"
                     width={299}
                     height={299}
-                    className="absolute top-0 right-0 object-contain"
+                    className="absolute top-0 right-0 object-contain animate-spin [animation-direction:reverse] [animation-duration:150s]"
                 />
             </div>
             <div className="pt-[70px] pb-[55px]">
