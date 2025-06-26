@@ -17,28 +17,15 @@ export default function Benchmarking() {
                 </div>
 
                 <div className="relative w-full h-[550px] mt-4">
-                    <Image
-                        src="/Ellipse 1.png"
-                        alt="Ellipse"
-                        width={23}
-                        height={23}
-                        className="absolute top-[-165px] left-[811px]"
-                    />
-                    <Image
-                        src="/Line 7.png"
-                        alt="Line"
-                        width={605}
-                        height={2}
-                        className="absolute top-[-155px] left-[822px]"
-                    />
-                    <Image
-                        src="/Image 6.png"
-                        alt="Image 6"
-                        width={800}
-                        height={800}
-                        className="absolute top-[-565px] left-[966px]"
-                        unoptimized
-                    />
+                    <div className="relative w-full h-[550px] mt-4">
+                        <Image
+                            src="/Trama Servicios Desktop.png"
+                            alt="Ellipse"
+                            width={1050}
+                            height={1050}
+                            className="absolute top-[-639px] left-[790px]"
+                        />
+                    </div>
                 </div>
 
                 <div className="relative h-[100px] mt-[50px]">
