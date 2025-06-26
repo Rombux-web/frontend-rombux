@@ -66,20 +66,28 @@ export default function Formulario() {
                     </div>
 
                     <button
-                            type="submit"
-                            className="bg-[#D81FB9] text-white text-[32px] font-semibold h-[78px] w-[306px] rounded-[50px] mt-[23px] mb-[40px]"
-                        >
-                            Enviar
-                        </button>
+                        type="submit"
+                        className="bg-[#D81FB9] text-white text-[32px] font-semibold h-[78px] w-[306px] rounded-[50px] mt-[23px] mb-[40px]"
+                    >
+                        Enviar
+                    </button>
                 </form>
             </div>
 
-            <div className="relative w-[500px] h-[500px] mt-[450px] ml-[-270px]">
+            <div className="relative w-[650px] mt-[431px] ml-[-157px] overflow-visible">
                 <Image
                     src="/Grupo 1 esfera.png"
                     alt="Grupo Formulario"
-                    fill
-                    className="object-cover"
+                    width={545}
+                    height={545}
+                    
+                />
+                <Image
+                    src="/Trama esfera celeste.png"
+                    alt="Trama Formulario"
+                    width={615}
+                    height={615}
+                    className="absolute top-[-35px] left-[-35px] pointer-events-none animate-spin [animation-direction:reverse] [animation-duration:150s]"
                 />
             </div>
         </div>
