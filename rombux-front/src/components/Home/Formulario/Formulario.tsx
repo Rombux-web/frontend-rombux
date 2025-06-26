@@ -6,7 +6,7 @@ export default function Formulario() {
     return (
         <div className="flex ml-[140px] mt-[40px] pt-[100px] gap-[60px]">
             <div>
-                <h1 className="text-black text-[110px] w-[1192px] leading-[120px] font-light mb-[120px]">
+                <h1 className="text-black text-[120px] w-[1192px] leading-[120px] font-light mb-[105px]">
                     Te acompañamos en
                     <br />
                     tu desarrollo digital
@@ -16,22 +16,19 @@ export default function Formulario() {
                     Contáctanos
                 </h2>
 
-                <form className="mt-[40px] flex flex-col space-y-6 pb-[86px]">
+                <form className="mt-[35px] flex flex-col space-y-[42px] pb-[86px]">
                     {["Nombre*", "Apellido*", "Email*", "Empresa*"].map((placeholder, idx) => (
                         <input
                             key={idx}
                             type="text"
                             placeholder={placeholder}
-                            className="w-[884px] h-[78px] border rounded-[5px] px-4 font-bold text-[28px] leading-[32px] tracking-normal placeholder:text-gray-500 text-[#4B4B4B]"
-                            style={{ borderColor: "#70707070" }}
+                            className="w-[884px] h-[78px] border-[1px] border-[#707070] rounded-[5px] pl-[32px] font-semibold text-[28px] leading-[32px] tracking-normal placeholder:text-gray-500 text-[#4B4B4B]"
+
                         />
                     ))}
 
-                    <div
-                        className="w-[884px] border rounded-[5px] p-6 space-y-4"
-                        style={{ borderColor: "#70707070" }}
-                    >
-                        <p className="text-[28px] font-semibold text-[#4B4B4B] mb-2 py-[30px] leading-[28px] tracking-normal">
+                    <div className="w-[884px] h-[340px] border border-[#707070] rounded-[5px] pt-[26px] pl-8 space-y-4 bg-white">
+                        <p className="text-[28px] font-semibold text-gray-500 mb-[26px]  leading-[28px] tracking-normal">
                             Área/s de servicios requeridos*
                         </p>
 
@@ -44,12 +41,13 @@ export default function Formulario() {
                         ].map(({ bold, rest }, idx) => (
                             <label
                                 key={idx}
-                                className="flex items-start space-x-3 text-[24px] text-[#4B4B4B]"
+                                className="flex items-start space-x-[47px] text-[24px]   text-gray-500 -mt-[2px]"
                             >
                                 <input
                                     type="checkbox"
-                                    className="mt-[3px] w-5 h-5 accent-[#D81FB9]"
+                                    className=" w-[38px] h-[35px] border-2 border-gray-500 rounded-md appearance-none bg-white checked:bg-[#D81FB9]"
                                 />
+
                                 <span>
                                     <strong className="font-semibold">{bold}</strong>
                                     {rest}
@@ -57,27 +55,22 @@ export default function Formulario() {
                             </label>
                         ))}
                     </div>
-                    <div
-                        className="w-[884px] h-[270px] border rounded-[5px] p-6"
-                        style={{ borderColor: "#70707070" }}
-                    >
-                        <label htmlFor="mensaje" className=" block text-sm mb-2">
-                        </label>
+                    <div className="w-[884px] h-[270px] border border-[#707070] rounded-[5px] p-4 bg-white">
                         <textarea
                             id="mensaje"
                             name="mensaje"
                             required
-                            className="w-full h-full p-2 text-[28px] font-bold  placeholder:text-gray-500 text-[#4B4B4B] resize-none focus:outline-none bg-transparent"
+                            className="w-full h-full pl-4 pt-[3px] text-[28px] font-semibold placeholder:text-gray-500 text-[#4B4B4B] resize-none focus:outline-none bg-transparent"
                             placeholder="Mensaje*"
                         />
                     </div>
 
                     <button
-                        type="submit"
-                        className="bg-[#D81FB9] text-white text-[32px] font-bold h-[78px] w-[250px] rounded-[50px] mt-[12px] mb-[40px]"
-                    >
-                        Enviar
-                    </button>
+                            type="submit"
+                            className="bg-[#D81FB9] text-white text-[32px] font-semibold h-[78px] w-[306px] rounded-[50px] mt-[23px] mb-[40px]"
+                        >
+                            Enviar
+                        </button>
                 </form>
             </div>
 
