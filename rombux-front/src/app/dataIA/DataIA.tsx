@@ -17,25 +17,11 @@ export default function DataIA() {
 
                 <div className="relative w-full h-[550px] mt-4">
                     <Image
-                        src="/Ellipse 1.png"
+                        src="/Trama Servicios Desktop.png"
                         alt="Ellipse"
-                        width={23}
-                        height={23}
-                        className="absolute top-[-155px] left-[760px]"
-                    />
-                    <Image
-                        src="/Line 7.png"
-                        alt="Line"
-                        width={565}
-                        height={2}
-                        className="absolute top-[-145px] left-[760px]"
-                    />
-                    <Image
-                        src="/Image 6.png"
-                        alt="Image 6"
-                        width={750}
-                        height={750}
-                        className="absolute top-[-530px] left-[900px]"
+                        width={1050}
+                        height={1050}
+                        className="absolute top-[-623px] left-[790px]"
                     />
                 </div>
 
