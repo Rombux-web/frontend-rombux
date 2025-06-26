@@ -67,7 +67,7 @@ export default function Formulario() {
 
                     <button
                         type="submit"
-                        className="bg-[#D81FB9] text-white text-[32px] font-semibold h-[78px] w-[306px] rounded-[50px] mt-[23px] mb-[40px]"
+                        className="bg-[#D81FB9] text-white text-[32px] font-semibold h-[78px] w-[306px] rounded-[50px] mt-[23px] mb-[166px]"
                     >
                         Enviar
                     </button>
