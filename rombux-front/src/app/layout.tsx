@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Albert_Sans } from "next/font/google";
+import { Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const albertSans = Albert_Sans({
   subsets: ['latin'],
@@ -15,11 +11,6 @@ const albertSans = Albert_Sans({
   display: 'swap',
   variable: '--font-albert-sans',
 })
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Rombux",
@@ -36,9 +27,9 @@ export default function RootLayout({
       <body
         className={`${albertSans.variable} antialiased`}
       >
-        <Navbar/>
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
