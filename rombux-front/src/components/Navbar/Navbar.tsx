@@ -52,11 +52,11 @@ export default function NavbarPrueba() {
                         <hr className="my-3 border-gray-300" />
                         <Link href="/branding" onClick={toggleMenu}>• Branding</Link>
                         <hr className="my-3 border-gray-300" />
-                        <Link href="/marketing-digital" onClick={toggleMenu}>• Marketing Digital</Link>
+                        <Link href="/marketing" onClick={toggleMenu}>• Marketing Digital</Link>
                         <hr className="my-3 border-gray-300" />
                         <Link href="/growth" onClick={toggleMenu}>• Growth</Link>
                         <hr className="my-3 border-gray-300" />
-                        <Link href="/data-ia" onClick={toggleMenu}>• Data + IA</Link>
+                        <Link href="/dataia" onClick={toggleMenu}>• Data + IA</Link>
                         <hr className="my-3 border-gray-300" />
                     </div>
                     <Link href="/#casos" onClick={toggleMenu}>Casos</Link>

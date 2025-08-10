@@ -34,7 +34,7 @@ function HotelMobile() {
                 <p className="text-[18px] font-light md:font-normal leading-[24px] mb-6">
                     HMandT es una empresa de servicios turísticos con base en Ontario-Canadá, dedicada al marketing de hoteles y reservas. </p>
 
-                <p className="text-[18px] font-light md:font-normal leading-[24px] mb-6">Creamos de su identidad marcaria, apelando a atributos de clara significación: el mundo y la estrella mirados desde una ventanilla o pantalla. Diseñamos su página de presentación, incluyendo las ofertas y destinos preferidos para el alojamiento, traslados y viajes.</p>
+                    <p className="text-[18px] font-light md:font-normal leading-[24px] mb-6">Creamos de su identidad marcaria, apelando a atributos de clara significación: el mundo y la estrella mirados desde una ventanilla o pantalla. Diseñamos su página de presentación, incluyendo las ofertas y destinos preferidos para el alojamiento, traslados y viajes.</p>
                 <p className="text-[18px] italic font-medium leading-[24px] mb-12">
                     En base a una alianza como Affiliate Partner de Booking.com y Rentalcars.com, integramos Book engine para el sistema automático de reservas.
                 </p>

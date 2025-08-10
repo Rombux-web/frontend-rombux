@@ -1,4 +1,4 @@
-import HotelMobile from '@/components/Home/Enfoques/Marcas/Hotel/HotelMobile'
+import HotelMobile from '@/components/Home/Casos/Marcas/Hotel/HotelMobile'
 import React from 'react'
 
 function Hotel() {

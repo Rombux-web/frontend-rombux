@@ -4,7 +4,7 @@ import ButtonChile from "./Marcas/Chile/BotonChile";
 import ButtonClinic from "./Marcas/TheClinic/BotonClinic";
 import ButtonNatreon from "./Marcas/Natreon/BotonNatreon";
 import ButtonHotel from "./Marcas/Hotel/BotonHotel";
-import ButtonBintelligenz from "./Marcas/Bintelligenz.tsx/BotonBintelligenz";
+import ButtonBintelligenz from "./Marcas/Bintelligenz/BotonBintelligenz";
 
 export default function Grid() {
     return (

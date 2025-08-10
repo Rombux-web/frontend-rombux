@@ -1,5 +1,5 @@
 import React from 'react'
-import BinMobile from '@/components/Home/Enfoques/Marcas/Bintelligenz.tsx/BinMobile'
+import BinMobile from '@/components/Home/Casos/Marcas/Bintelligenz/BinMobile'
 
 function Bintelligenz() {
     return (
