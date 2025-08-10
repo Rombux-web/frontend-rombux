@@ -71,7 +71,7 @@ export default function Servicios() {
                         title="Data+IA"
                         icon="/cerebro.png"
                         description="Dirige tu expansión con información clave y conocimiento predictivo."
-                        link="/data"
+                        link="/dataia"
                     />
                 </div>
             </div>

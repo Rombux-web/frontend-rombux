@@ -13,7 +13,7 @@ export default function SubNavBar() {
         { label: 'Branding', path: '/branding' },
         { label: 'Marketing Digital', path: '/marketing' },
         { label: 'Growth', path: '/growth' },
-        { label: 'Data+IA', path: '/data' },
+        { label: 'Data+IA', path: '/dataia' },
     ];
 
     useEffect(() => {
