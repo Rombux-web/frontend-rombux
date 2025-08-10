@@ -1,9 +1,7 @@
 'use client'
 
-import { useKeenSlider, KeenSliderInstance } from 'keen-slider/react'
-import 'keen-slider/keen-slider.min.css'
-import { useRef, useEffect } from 'react'
-
+import React, { useEffect, useRef } from 'react'
+import { motion, useAnimation } from 'framer-motion'
 
 const images = [
     { src: '/hp.jpg', alt: 'HP' },
@@ -16,71 +14,46 @@ const images = [
 const loopedImages = [...images, ...images]
 
 export default function Carousel() {
-    const sliderInstance = useRef<KeenSliderInstance | null>(null)
-
-    const [sliderContainerRef] = useKeenSlider<HTMLDivElement>({
-        loop: true,
-        slides: {
-            perView: 'auto',
-            spacing: 0,
-        },
-        created(s) {
-            sliderInstance.current = s
-            startAnimation()
-        },
-        destroyed() {
-            stopAnimation()
-        },
-        animationEnded() {
-            startAnimation()
-        },
-    })
-
-    const speed = 0.0001
-
-    function startAnimation() {
-        if (!sliderInstance.current) return
-        sliderInstance.current.animator.start([
-            {
-                distance: speed * 200,
-                duration: 1000,
-                easing: (t) => t,
-            },
-        ])
-    }
-
-    function stopAnimation() {
-        sliderInstance.current?.animator.stop()
-    }
+    const controls = useAnimation()
+    const containerRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
-        return () => {
-            stopAnimation()
+        const animate = async () => {
+            if (!containerRef.current) return
+
+            const containerWidth = containerRef.current.scrollWidth / 2
+
+            while (true) {
+                await controls.start({
+                    x: -containerWidth,
+                    transition: { duration: 20, ease: 'linear' },
+                })
+                await controls.set({ x: 0 })
+            }
         }
-    }, [])
+        animate()
+    }, [controls])
 
     return (
-        <div ref={sliderContainerRef} className="keen-slider w-full overflow-hidden">
-            {loopedImages.map((image, i) => (
-                <div
-                    key={i}
-                    className="keen-slider__slide shrink-0 flex items-center justify-center"
-                    style={{
-                        width: 'auto',
-                        padding: '0px',
-                    }}
-                >
-                    <img
-                        src={image.src}
-                        alt={image.alt}
-                        style={{
-                            height: '284px',
-                            width: 'auto',
-                            objectFit: 'contain',
-                        }}
-                    />
-                </div>
-            ))}
+        <div className="overflow-hidden w-full">
+            <motion.div
+                ref={containerRef}
+                className="flex"
+                animate={controls}              
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.1}
+            >
+                {loopedImages.map(({ src, alt }, i) => (
+                    <div key={i} className="flex-shrink-0">
+                        <img
+                            src={src}
+                            alt={alt}
+                            className="h-[284px] max-xl:h-[160px] w-auto object-contain select-none"
+                            draggable={false}
+                        />
+                    </div>
+                ))}
+            </motion.div>
         </div>
     )
 }

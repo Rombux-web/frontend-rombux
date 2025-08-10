@@ -1,5 +1,5 @@
 import React from 'react';
-import SubNavbar from "@/components/SubNavbar/SubNavbar";
+import SubNavBar from "@/components/SubNavBar/SubNavBar";
 import Marketing from './Marketing';
 import MarketingCards from "@/app/marketing/MarketingCards";
 import MarketingForm from "@/app/marketing/MarketingForm";
@@ -7,13 +7,13 @@ import MarketingForm from "@/app/marketing/MarketingForm";
 export default function Page() {
     return (
         <div className="flex flex-col">
-            <SubNavbar />
+            <SubNavBar />
             <main>
                 <Marketing />
                 <div className="-mt-120">
                     <MarketingCards />
                 </div>
-                <div className="-mb-80">
+                <div>
                     <MarketingForm />
                 </div>
             </main>

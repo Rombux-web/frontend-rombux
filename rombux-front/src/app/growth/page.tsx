@@ -1,19 +1,19 @@
 import React from 'react';
-import SubNavbar from "@/components/SubNavbar/SubNavbar";
+import SubNavBar from "@/components/SubNavBar/SubNavBar";
 import Growth from './Growth';
 import GrowthCards from "@/app/growth/GrowthCards";
 import GrowthForm from "@/app/growth/GrowthForm";
 
 export default function Page() {
     return (
-        <div className="flex flex-col">
-            <SubNavbar />
+        <div className="flex flex-col relative">
+            <SubNavBar />
             <main>
                 <Growth />
                 <div className="-mt-120">
                     <GrowthCards />
                 </div>
-                <div className="-mb-80">
+                <div>
                     <GrowthForm />
                 </div>
             </main>

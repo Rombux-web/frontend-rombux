@@ -1,19 +1,19 @@
 import React from 'react';
-import SubNavbar from "@/components/SubNavbar/SubNavbar";
+import SubNavBar from "@/components/SubNavBar/SubNavBar";
 import DataIA from './DataIA';
-import DataCards from "@/app/dataIA/DataCards";
-import DataForm from "@/app/dataIA/DataForm";
+import DataCards from "@/app/dataia/DataCards";
+import DataForm from "@/app/dataia/DataForm";
 
 export default function Page() {
     return (
-        <div className="flex flex-col">
-            <SubNavbar />
+        <div className="flex flex-col relative">
+            <SubNavBar />
             <main>
                 <DataIA />
                 <div className="-mt-120">
                     <DataCards />
                 </div>
-                <div className="-mb-80">
+                <div>
                     <DataForm />
                 </div>
             </main>

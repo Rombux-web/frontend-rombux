@@ -1,9 +1,10 @@
-import Thanks from "@/components/ThankYou/ThankYou"
-
+import Thank from "@/components/ThankYou/ThankYou"
 
 function page() {
     return (
-        <div><Thanks/></div>
+        <div className="min-h-screen">
+            <Thank />
+        </div>
     )
 }
 

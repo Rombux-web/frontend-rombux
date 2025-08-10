@@ -1,22 +1,24 @@
 import React from 'react';
-import SubNavbar from '@/components/SubNavbar/SubNavbar';
+import SubNavBar from "@/components/SubNavBar/SubNavBar";
 import Branding from './Branding';
 import BrandingCards from "@/app/branding/BrandingCards";
 import BrandingForm from "@/app/branding/BrandingForm";
 
+
 export default function Page() {
     return (
         <div className="flex flex-col">
-            <SubNavbar />
+            <SubNavBar />
             <main>
                 <Branding />
                 <div className="-mt-120">
                     <BrandingCards />
                 </div>
-                <div className="-mb-80">
+                <div>
                     <BrandingForm />
                 </div>
             </main>
+
         </div>
     );
 }

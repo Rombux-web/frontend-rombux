@@ -1,10 +1,75 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500&display=swap');
+@import "keen-slider/keen-slider.min.css";
+
 
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+@media (max-width: 1680px) {
+  .custom-ml {
+    margin-left: -14% !important;
+  }
+}
+
+@media (max-width: 1860px) and (min-width: 1532px) {
+  .custom-image {
+    width: 700px;
+    transform: translateY(-80px);
+  }
+}
+
+@media (max-width: 1860px) and (min-width: 1532px) {
+  .custom-red {
+    width: 550px;;
+  }
+}
+
+@media (max-width: 1800px) {
+  .custom-herotext {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 1690px) and (min-width: 1532px) {
+  .custom-form {
+    transform: translateX(-140px);
+  }
+}
+
+@media (max-width: 1690px) and (min-width: 1532px) {
+  .custom-contact-form {
+    transform: translateX(-120px);
+  }
+}
+
+@media (max-width: 1860px) and (min-width: 1532px) {
+  .custom-hero-text {
+    margin-top: 220px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .custom-woman {
+    width: 380px;
+    height: 380px;
+    margin-top: 10px;
+    
+    
+  }
+}
+
+@media (max-width: 1060px) {
+  .custom-woman-two {
+    width: 500px;
+    height: 500px;
+    margin-bottom: 30px;
+    transform: translateX(80px);
+    margin-top: 20px;
+  }
 }
 
 @theme inline {
@@ -31,6 +96,8 @@ body {
   font-family: var(--font-albert-sans), sans-serif;
   background-color: white;
   overflow-x: hidden;
+  overscroll-behavior: none;
+  /* si querés tener un fondo base por detrás */
 }
 
 .bg-hero {
