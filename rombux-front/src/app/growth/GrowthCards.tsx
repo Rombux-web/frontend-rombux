@@ -2,72 +2,39 @@ import React from "react";
 
 export default function GrowthCards() {
     return (
-        <div className="relative w-full max-w-[1920px] mx-auto pt-[135px]">
-
-            <div className="mb-24 text-center -mt-[92px] ml-[15px]">
-                <h1 className="font-light text-black text-[120px] leading-[120px]">
+        <div>
+            <div className="mb-24 text-center -mt-[140px] ml-[15px] max-sm:ml-0 max-sm:mb-8">
+                <h1 className="font-light text-black text-[80px] leading-[80px] max-2xl:text-[67px] max-2xl:leading-[70px] max-lg:text-[36px] max-lg:leading-[40px] max-sm:px-4">
                     Crecimiento y <br />
                     posicionamiento de mercado
                 </h1>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 px-[137px] mb-[88px]">
+            <div className="grid grid-cols-3 max-md:grid-cols-1 pt-[51px] w-fit mx-auto mb-[167px] justify-items-center max-lg:pt-[15px] max-md:gap-y-7 max-sm:mb-[80px]">
                 <div
-                    className="mt-[62px] w-[522px] bg-cover bg-center text-white rounded-[29px] overflow-hidden flex items-center justify-center px-10 py-12"
-                    style={{ backgroundImage: "url('/Gradiente-Home-2.png')", height: "381px" }}
+                    className="relative top-[30px] w-[427px] h-[218px] bg-cover bg-center text-white rounded-3xl overflow-hidden flex items-start justify-center  max-xl:w-[292px] max-xl:mt-2  max-xl:h-[207px] max-lg:max-w-[230px] max-lg:h-[212px] max-md:max-w-[292px] max-md:top-0 max-sm:mt-0 max-md:h-[190px]"
+                    style={{ backgroundImage: "url('/gradiente-desktop.png')" }}
                 >
-                    <p className="font-medium text-[32px] leading-[42px] text-left pl-[5px]">
-                        Expansión inteligente y
-                        <br />
-                        sostenible. Diseñamos e
-                        <br />
-                        implementamos estrategias
-                        <br />
-                        para expandir tu cuota de
-                        <br />
-                        mercado y consolidar tu
-                        <br />
-                        posición de liderazgo.
+                    <p className="text-[20px] leading-[28px] text-left -ml-[2px] py-10 max-w-[351px] max-xl:max-w-[239px] max-xl:text-[18px] max-xl:leading-[25px] max-xl:py-7 max-lg:text-[16px] max-lg:pl-2 max-lg:max-w-[200px] max-lg:pt-5 max-md:max-w-[239px] max-md:ml-2 max-md:pl-0">
+                        Expansión inteligente y sostenible. Diseñamos e implementamos estrategias para expandir tu cuota de mercado y consolidar tu posición de liderazgo.
                     </p>
                 </div>
 
                 <div
-                    className="mt-[76px] w-[522px] mb-[80px] relative -top-[40px] bg-cover bg-center text-white rounded-[29px] overflow-hidden flex items-center justify-center px-10 ml-[2px]"
-                    style={{ backgroundImage: "url('/Gradiente-Home-2.png')", height: "434px" }}
+                    className="relative top-[30px] left-1 w-[427px] h-[218px] bg-cover bg-center text-white rounded-[28px] overflow-hidden flex items-start justify-center max-xl:w-[302px] max-xl:h-[228px] max-lg:max-w-[230px] max-lg:h-[215px] max-lg:mt-2 max-md:max-w-[292px] max-md:top-0 max-md:left-0 max-md:mt-0 max-md:h-[195px]"
+                    style={{ backgroundImage: "url('/gradiente-desktop.png')" }}
                 >
-                    <p className="font-medium text-[32px] leading-[42px] text-left pr-[21px]">
-                        Growth Strategy - Growth
-                        <br />
-                        Loops y Optimización de
-                        <br />
-                        Funnels. Embudos de
-                        <br />
-                        conversión inteligentes y
-                        <br />
-                        loops de crecimiento que
-                        <br />
-                        activan y retienen a tus
-                        <br />
-                        usuarios.
+                    <p className="text-[20px] leading-[28px] text-left py-10 max-w-[357px] max-xl:max-w-[246px] max-xl:text-[18px] max-xl:leading-[25px] max-xl:py-7  max-lg:text-[16px] max-lg:max-w-[200px] max-lg:pt-5 max-lg:pl-2 max-md:max-w-[239px] max-md:ml-2 max-md:pl-0">
+                        Growth Strategy - Growth Loops y Optimización de Funnels. Embudos de conversión inteligentes y loops de crecimiento que activan y retienen a tus usuarios.
                     </p>
                 </div>
 
                 <div
-                    className="mt-[62px] w-[522px] bg-cover bg-center text-white rounded-[29px] overflow-hidden flex items-center justify-center px-8 ml-[3px]"
-                    style={{ backgroundImage: "url('/Gradiente-Home-2.png')", height: "382px" }}
+                    className="bg-cover bg-center w-[427px] h-[218px] text-white rounded-[29px] overflow-hidden flex items-start justify-center  ml-[22px] mt-[30px] max-xl:w-[292px]  max-xl:mt-[39px] max-xl:h-[207px] max-lg:max-w-[230px] max-lg:h-[236px] max-md:max-w-[292px] max-md:mt-0 max-md:ml-0 max-md:h-[195px]"
+                    style={{ backgroundImage: "url('/gradiente-desktop.png')" }}
                 >
-                    <p className="font-medium text-[32px] leading-[42px] text-left pr-[5px]">
-                        Optimización continua. Nos
-                        <br />
-                        enfocamos en identificación
-                        <br />
-                        de oportunidades de
-                        <br />
-                        crecimiento escalables y en la
-                        <br />
-                        mejora constante de tu
-                        <br />
-                        presencia en el mercado.
+                    <p className="text-[20px] leading-[28px] text-left py-10 max-w-[357px] max-xl:max-w-[259px] mx-auto max-xl:text-[18px] max-xl:leading-[25px] max-xl:py-7 max-xl:pl-1 max-lg:pl-2 max-lg:text-[16px] max-lg:max-w-[200px] max-lg:pt-[19px] max-md:max-w-[239px] max-md:pl-1">
+                        Optimización continua. Nos enfocamos en identificación de oportunidades de crecimiento escalables y en la mejora constante de tu presencia en el mercado.
                     </p>
                 </div>
             </div>

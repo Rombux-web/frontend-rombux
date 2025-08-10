@@ -1,17 +1,17 @@
 import React from 'react'
-import Image from 'next/image'
+import BotonesCirculares from '../BotonesInteractivos/BotonesCirculares'
 
 function TyC() {
     return (
-        <div className='text-black pt-[400px]  max-w-[1637px] mx-auto'>
-            <div className='mb-[150px]'>
-                <h1 className='text-[#D81FB9] text-[64px]'>Términos y Condiciones</h1>
-                <p className='italic text-[28px]'>Última actualización: 1 de enero 2025</p>
+        <div className='text-black pt-[219px] min-h-screen max-w-[1637px] mx-[290px] max-xl:mx-[140px]  max-lg:mx-[20px]'>
+            <div className='mb-[177px] max-xl:px-10 max-md:px-2 max-md:mb-[50px]'>
+                <h1 className='text-[#D81FB9] text-[64px] font-bold max-md:text-[40px] max-md:leading-[40px]'>Términos y Condiciones</h1>
+                <p className='text-[20px] mt-[10px]'>Última actualización: 1 de enero 2025</p>
             </div>
-            <div className='text-[32px] flex flex-col gap-2 font-light leading-[36px]'>
-                <p className='pb-4'>Bienvenido al sitio web de Rombux. Al acceder y utilizar este sitio web, aceptas cumplir con los siguientes términos y condiciones de uso. Si no estás de acuerdo con estos términos, por favor, abstente de utilizar este sitio.</p>
-                <p className='pb-4'>El acceso o utilización del sitio web por parte de un visitante le atribuye a éste la condición de usuario general e implica la aceptación plena y sin reservas por parte del mismo de los Términos de Uso, en la versión publicada en el momento mismo en que el usuario acceda al sitio web. La Agencia se reserva el derecho de cambiar,modificar, añadir o eliminar parcialmente, en cualquier momento, estos Términos de Uso, o cambiar, suspender o desconectar el Servicio en cualquier momento mandando una notificación a los usuarios por correo electrónico o publicándolo en el sitio web. En consecuencia, el usuario debe leer atentamente los Términos de Uso cuando se proponga utilizar el site. Es responsabilidad del Usuario comprobar los Términos de Uso periódicamente.</p>
-                <p className='pb-4'>La Agencia podrá establecer condiciones particulares (en adelante, las "Condiciones Particulares") para la contratación o utilización de determinados servicios o productos que se ofrezcan a través de Rombus, por tanto, el usuario también ha de leer atentamente las correspondientes Condiciones Particulares que podrán ser publicadas en el site o enviadas por correo electrónico o enlace de descarga.</p>
+            <div className='text-[24px] flex flex-col gap-2 leading-[28px] max-xl:px-10 max-md:px-2 max-md:text-[18px]'>
+                <p className='pb-5'>Bienvenido al sitio web de Rombux. Al acceder y utilizar este sitio web, aceptas cumplir con los siguientes términos y condiciones de uso. Si no estás de acuerdo con estos términos, por favor, abstente de utilizar este sitio.</p>
+                <p className='pb-5'>El acceso o utilización del sitio web por parte de un visitante le atribuye a éste la condición de usuario general e implica la aceptación plena y sin reservas por parte del mismo de los Términos de Uso, en la versión publicada en el momento mismo en que el usuario acceda al sitio web. La Agencia se reserva el derecho de cambiar,modificar, añadir o eliminar parcialmente, en cualquier momento, estos Términos de Uso, o cambiar, suspender o desconectar el Servicio en cualquier momento mandando una notificación a los usuarios por correo electrónico o publicándolo en el sitio web. En consecuencia, el usuario debe leer atentamente los Términos de Uso cuando se proponga utilizar el site. Es responsabilidad del Usuario comprobar los Términos de Uso periódicamente.</p>
+                <p className='pb-5'>La Agencia podrá establecer condiciones particulares (en adelante, las "Condiciones Particulares") para la contratación o utilización de determinados servicios o productos que se ofrezcan a través de Rombux, por tanto, el usuario también ha de leer atentamente las correspondientes Condiciones Particulares que podrán ser publicadas en el site o enviadas por correo electrónico o enlace de descarga.</p>
                 <p className='pb-4'>El usuario es consciente de, y acepta voluntariamente,que el uso de Rombux, de los servicios y de los contenidos tiene lugar, en todo caso, bajo su única y exclusiva responsabilidad.</p>
                 <p className='pb-5'>Al registrarse en el sitio web y hacer clic en el botón “Enviar” del formulario correspondiente o botón similar, admite haber leído y aceptado los siguientes Términos de Uso y las Políticas de Privacidad y Protección de Datos Personales. Sin perjuicio de lo indicado, cualquier visita de las páginas o uso de los servicios disponibles en este sitio web, implica la aceptación de los Términos y Condiciones de Uso y a las Políticas de Privacidad y Protección de Datos Personales de Rombux.</p>
                 <h2 className='pb-5 font-bold'>Uso del Sitio</h2>
@@ -30,37 +30,12 @@ function TyC() {
                 <h2 className='pb-5 font-bold'>Responsabilidad por el funcionamiento del site</h2>
                 <p className='pb-5'>Rombux podrá, cuando lo considere conveniente, realizar correcciones, mejoras o modificaciones en la información contenida en el site sin que ello de lugar ni derecho a ninguna reclamación o indemnización, ni implique reconocimiento de responsabilidad alguna. Tampoco se hará responsable por los daños y perjuicios de cualquier naturaleza que se pudieran derivar de la disponibilidad y continuidad técnica del funcionamiento de la página.</p>
                 <h2 className='pb-5 font-bold'>Ley Aplicable</h2>
-                <p className='pb-5'>Ley Aplicable Estos términos y condiciones se rigen por las leyes argentinas. Todo litigio, controversia o reclamación resultante, se resolverá mediante los tribunales ordinarios de la Capital Federal, con renuncia a cualquier otro fuero y/ o jurisdicción que pueda corresponderles por su domicilio.</p>
+                <p className='pb-5'>Estos términos y condiciones se rigen por las leyes argentinas. Todo litigio, controversia o reclamación resultante, se resolverá mediante los tribunales ordinarios de la Capital Federal, con renuncia a cualquier otro fuero y/ o jurisdicción que pueda corresponderles por su domicilio.</p>
                 <h2 className='pb-5 font-bold'>Contacto</h2>
-                <p className='pb-4'>Para cualquier pregunta o inquietud relacionada con estos términos y condiciones, puedes contactarnos en admin@rombux.com.</p>
+                <p >Para cualquier pregunta o inquietud relacionada con estos términos y condiciones, puedes contactarnos en admin@rombux.com.</p>
             </div>
 
-            <div className="w-full flex justify-center mt-[160px] mb-[120px]">
-                <div className="w-[1235px] flex justify-center gap-[140px] items-start text-black">
-
-                    <div className="w-[220px] h-[220px] bg-[#D81FB90D] rounded-full flex flex-col justify-center items-center text-black text-center px-2">
-                        <Image src="/Calendly.gif" alt="Calendario" width={64} height={64} className='rounded-lg' />
-                        <div className="mt-[24px] w-[132px] text-center text-[24px] leading-[24px]">
-                            Agenda una reunión
-                        </div>
-                    </div>
-
-                    <div className="w-[220px] h-[220px] bg-[#D81FB90D] rounded-full flex flex-col justify-center items-center text-black text-center px-2">
-                        <Image src="/Mensaje.gif" alt="Mensaje" width={64} height={64} className='rounded-lg' />
-                        <div className="mt-[24px] w-[132px] text-center text-[24px] leading-[24px]">
-                            Envíanos un mensaje
-                        </div>
-                    </div>
-
-                    <div className="w-[220px] h-[220px] bg-[#D81FB90D] rounded-full flex flex-col justify-center items-center text-black text-center px-2">
-                        <Image src="/Chat.gif" alt="Chat" width={64} height={64} className='rounded-lg' />
-                        <div className="mt-2 text-[16px] leading-tight">
-                            Chatea con Romy<br />nuestro agente IA
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            <BotonesCirculares />
 
         </div>
     )
