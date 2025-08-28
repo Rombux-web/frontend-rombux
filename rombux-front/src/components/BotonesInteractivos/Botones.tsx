@@ -8,7 +8,13 @@ export default function Botones() {
                 gap-[90px] lg:gap-x-[200px] 2xl:gap-x-[410px] w-full 
                 max-w-[336px] lg:max-w-[900px] 2xl:max-w-[1343px]">
 
-                <div className="flex flex-col items-center cursor-pointer w-[151px]">
+                {/* Agenda una reunión */}
+                <a
+                    href="https://calendly.com/hola-rombux/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center cursor-pointer w-[151px]"
+                >
                     <Image
                         src="/Calendly.gif"
                         alt="Calendario"
@@ -21,9 +27,13 @@ export default function Botones() {
                         whitespace-nowrap lg:whitespace-normal">
                         Agenda una <br className="hidden lg:block" /> reunión
                     </div>
-                </div>
+                </a>
 
-                <div className="flex flex-col items-center cursor-pointer w-[151px]">
+                {/* Mándanos un email */}
+                <a
+                    href="mailto:hola@rombux.com"
+                    className="flex flex-col items-center cursor-pointer w-[151px]"
+                >
                     <Image
                         src="/Mensaje.gif"
                         alt="Mensaje"
@@ -36,9 +46,15 @@ export default function Botones() {
                         whitespace-nowrap lg:whitespace-normal">
                         Mándanos un <br className="hidden lg:block" /> email
                     </div>
-                </div>
+                </a>
 
-                <div className="flex flex-col items-center cursor-pointer">
+                {/* Chatea con Romy */}
+                <a
+                    href="https://agent.jotform.com/019714ec463c79b69e90e483f0059cefba31"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center cursor-pointer"
+                >
                     <Image
                         src="/Chat.gif"
                         alt="Chat"
@@ -51,7 +67,7 @@ export default function Botones() {
                         whitespace-nowrap lg:whitespace-normal">
                         Chatea con Romy, <br className="hidden lg:block" /> nuestra agente IA
                     </div>
-                </div>
+                </a>
 
             </div>
         </div>

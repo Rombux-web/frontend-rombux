@@ -1,9 +1,9 @@
-import HpMobile from '@/components/Home/Casos/Marcas/HP/HpMobile'
+import HpMobile from '@/components/Home/Enfoques/Marcas/HP/HpMobile'
 import React from 'react'
 
 function page() {
     return (
-        <div><HpMobile /></div>
+        <div><HpMobile/></div>
     )
 }
 

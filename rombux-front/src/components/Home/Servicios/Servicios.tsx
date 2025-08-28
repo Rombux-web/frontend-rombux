@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import ServicioItem from "./ServiciosItem";
+import ServicioItem from "./ServicioItem";
 import Enfoque from "../Enfoque/Enfoque";
 
 export default function Servicios() {
@@ -19,7 +19,7 @@ export default function Servicios() {
                     <div className="relative w-[700px] h-[630px] overflow-visible mt-34 max-2xl:w-[600px] max-2xl:mt-10 max-xl:w-[450px] ">
 
                         <div className="relative ml-[76px] w-[725px] max-2xl:w-[580px] max-xl:-ml-[60px] max-xl:w-[480px] h-[725px] flex justify-center items-center -mt-[76px] max-xl:-mt-[110px] max-lg:hidden">
-                            <div className="w-[1000px] h-[1000px]">
+                            <div className="w-full h-full relative">
                                 <Image
                                     src="/man2.png"
                                     alt="Fondo"
@@ -71,7 +71,7 @@ export default function Servicios() {
                         title="Data+IA"
                         icon="/cerebro.png"
                         description="Dirige tu expansión con información clave y conocimiento predictivo."
-                        link="/dataia"
+                        link="/data"
                     />
                 </div>
             </div>

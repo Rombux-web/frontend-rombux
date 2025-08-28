@@ -1,9 +1,9 @@
-import NatreonMobile from '@/components/Home/Casos/Marcas/Natreon/NatreonMobile'
+import NatreonMobile from '@/components/Home/Enfoques/Marcas/Natreon/NatreonMobile'
 import React from 'react'
 
 function Natreon() {
     return (
-        <div><NatreonMobile /></div>
+        <div><NatreonMobile/></div>
     )
 }
 
