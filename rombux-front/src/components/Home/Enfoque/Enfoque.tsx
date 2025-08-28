@@ -5,7 +5,7 @@ function Enfoque() {
     return (
         <div className='text-black mt-[120px] max-xl:mt-[100px] mb-[215px] max-xl:mb-[150px] max-md:mb-[85px]'>
             <div className="w-full flex justify-around mb-[89px] max-xl-20px]">
-                <h3 className="text-[80px] w-[1410px] leading-[80px] text-center max-2xl:text-[70px] max-2xl:leading-[70px] max-2xl:w-[900px] max-xl:font-light max-lg:text-[40px] max-lg:leading-[40px] max-lg:w-[400px]">Un enfoque <br className='md:hidden' /> especializado <br /><span className="text-[#D81FB9] font-normal">con 3 objetivos <br className='md:hidden' /> clave:</span>
+                <h3 className="text-[80px] w-[1410px] leading-[80px] text-center max-2xl:text-[70px] max-2xl:leading-[70px] max-2xl:w-[900px] max-xl:font-light max-lg:text-[40px] max-lg:leading-[40px] max-lg:w-[400px]">Un enfoque <br className='md:hidden'/> especializado <br /><span className="text-[#D81FB9] font-normal">con 3 objetivos <br className='md:hidden'/> clave:</span>
                 </h3>
             </div>
 

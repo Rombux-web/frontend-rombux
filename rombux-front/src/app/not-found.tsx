@@ -32,7 +32,7 @@ export default function NotFound() {
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 w-full z-50">
-                <Footer />
+                    <Footer />
             </div>
         </div>
     );
