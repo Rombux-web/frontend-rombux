@@ -1,5 +1,5 @@
 import React from 'react';
-import SubNavBar from "@/components/SubNavBar/SubNavBar";
+import SubNavBar from "@/components/SubNavbar/SubNavbar";
 import Growth from './Growth';
 import GrowthCards from "@/app/growth/GrowthCards";
 import GrowthForm from "@/app/growth/GrowthForm";
