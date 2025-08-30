@@ -1,4 +1,4 @@
-import Thank from "@/components/thankyou/thankyou";
+import Thank from "@/components/ThankYou/ThankYou";
 
 function page() {
     return (
