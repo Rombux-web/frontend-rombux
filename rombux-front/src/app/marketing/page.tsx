@@ -1,5 +1,5 @@
 import React from 'react';
-import SubNavBar from "@/components/SubNavBar/SubNavBar";
+import SubNavBar from "@/components/SubNavbar/SubNavbar";
 import Marketing from './Marketing';
 import MarketingCards from "@/app/marketing/MarketingCards";
 import MarketingForm from "@/app/marketing/MarketingForm";
