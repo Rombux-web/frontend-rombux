@@ -1,5 +1,5 @@
 import React from 'react';
-import SubNavBar from "@/components/SubNavBar/SubNavbar";
+import SubNavBar from "@/components/SubNavbar/SubNavbar";
 import Branding from './Branding';
 import BrandingCards from "@/app/branding/BrandingCards";
 import BrandingForm from "@/app/branding/BrandingForm";
