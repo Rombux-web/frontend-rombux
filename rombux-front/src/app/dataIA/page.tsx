@@ -1,8 +1,8 @@
 import React from 'react';
 import SubNavBar from "@/components/SubNavBar/SubNavbar";
 import DataIA from './DataIA';
-import DataCards from "@/app/dataia/DataCards";
-import DataForm from "@/app/dataia/DataForm";
+import DataCards from "@/app/dataIA/DataCards";
+import DataForm from "@/app/dataIA/DataForm";
 
 export default function Page() {
     return (
