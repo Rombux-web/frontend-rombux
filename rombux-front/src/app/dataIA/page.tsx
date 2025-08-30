@@ -1,5 +1,5 @@
 import React from 'react';
-import SubNavBar from "@/components/SubNavBar/SubNavBar";
+import SubNavBar from "@/components/SubNavBar/SubNavbar";
 import DataIA from './DataIA';
 import DataCards from "@/app/dataia/DataCards";
 import DataForm from "@/app/dataia/DataForm";
