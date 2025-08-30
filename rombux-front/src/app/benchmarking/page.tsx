@@ -1,5 +1,5 @@
 import React from 'react';
-import SubNavBar from "@/components/SubNavBar/SubNavBar";
+import SubNavBar from "@/components/SubNavBar/SubNavbar";
 import Benchmarking from './Benchmarking';
 import BenchmarkingCards from "@/app/benchmarking/BenchmarkingCards";
 import BenchmarkingForm from './BenchmarkingForm';
