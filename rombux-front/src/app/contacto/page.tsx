@@ -14,6 +14,7 @@ import {
   validarServicios,
 } from '@/utils/regex';
 import toast from 'react-hot-toast';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function Formulario() {
   const [nombre, setNombre] = useState('');
@@ -25,6 +26,7 @@ export default function Formulario() {
   const [serviciosSeleccionados, setServiciosSeleccionados] = useState<string[]>([]);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const router = useRouter(); // 👈 hook
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   const handleCheckboxChange = (servicio: string) => {
     setServiciosSeleccionados((prev) =>
@@ -43,9 +45,11 @@ export default function Formulario() {
     if (!regexEmail.test(email)) newErrors.email = 'Correo con formato incorrecto';
     if (!regexTelefono.test(telefono)) newErrors.telefono = 'Número de teléfono incorrecto';
     if (!regexEmpresa.test(empresa)) newErrors.empresa = 'Rellena este campo obligatorio';
-    if (!regexMensaje.test(mensaje)) newErrors.mensaje = 'Mensaje inválido, mínimo 25 caracteres';
+    if (!regexMensaje.test(mensaje))
+      newErrors.mensaje = 'El mensaje debe tener al menos 25 caracteres.';
     if (!validarServicios(serviciosSeleccionados))
       newErrors.servicios = 'Debes seleccionar al menos un servicio';
+    if (!captchaToken) newErrors.captcha = 'Por favor, verifica que no eres un robot.';
 
     setErrors(newErrors);
 
@@ -59,6 +63,7 @@ export default function Formulario() {
       empresa,
       mensaje,
       area_de_servicio: serviciosSeleccionados,
+      captchaToken,
     };
 
     const toastId = toast.loading('Enviando respuesta...');
@@ -242,6 +247,18 @@ export default function Formulario() {
               />
               {errors.mensaje && (
                 <p className='text-red-500 text-sm mt-4 ml-[-12px] text-left'>{errors.mensaje}</p>
+              )}
+            </div>
+
+            {/* ReCAPTCHA */}
+            <div className='mt-4'>
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
+                onChange={(token) => setCaptchaToken(token)}
+                theme='light'
+              />
+              {errors.captcha && (
+                <p className='text-red-500 text-sm mt-1 text-left'>{errors.captcha}</p>
               )}
             </div>
 
