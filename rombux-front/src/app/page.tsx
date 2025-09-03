@@ -1,36 +1,45 @@
-import Soluciones from "@/components/Home/Soluciones/Soluciones";
-import Carousel from "@/components/Home/Carousel/Carousel";
-import Servicios from "@/components/Home/Servicios/Servicios";
-import Enfoques from "@/components/Home/Enfoques/Enfoques";
-import Formulario from "@/components/Home/Formulario/Formulario";
-import Adn from "@/components/Home/Adn/Adn";
-import Footer from "@/components/Footer/Footer";
+import Soluciones from '@/components/Home/Soluciones/Soluciones';
+import Carousel from '@/components/Home/Carousel/Carousel';
+import Servicios from '@/components/Home/Servicios/Servicios';
+import Enfoques from '@/components/Home/Enfoques/Enfoques';
+import Formulario from '@/components/Home/Formulario/Formulario';
+import Adn from '@/components/Home/Adn/Adn';
+import Footer from '@/components/Footer/Footer';
+import UnderConstruction from '@/components/UnderConstruction/UnderConstruction';
 
-export default function Home() {
+// Variable de entorno para alternar páginas (asegúrate de tener NEXT_PUBLIC_GO_LIVE en tu .env.local)
+const goLive = process.env.NEXT_PUBLIC_GO_LIVE === 'true';
+
+function MainPageContent() {
   return (
-    <div className="relative pt-[14px] 2xl:pt-[96px]">
+    <div className='relative pt-[14px] 2xl:pt-[96px]'>
       <Soluciones />
       <Carousel />
 
-      <div id="servicios">
+      <div id='servicios'>
         <Servicios />
       </div>
 
-      <div id="casos">
+      <div id='casos'>
         <Enfoques />
       </div>
 
-      <div id="contacto">
+      <div id='contacto'>
         <Formulario />
       </div>
 
       <Adn />
 
-      <div className="absolute bottom-0 left-0 w-full z-50">
+      <div className='absolute bottom-0 left-0 w-full z-50'>
         <Footer />
       </div>
     </div>
   );
 }
 
-
+export default function Home() {
+  if (!goLive) {
+    return <UnderConstruction />;
+  }
+  return <MainPageContent />;
+}
