@@ -1,8 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500&display=swap');
-@import "keen-slider/keen-slider.min.css";
-
-
+@import 'keen-slider/keen-slider.min.css';
 
 :root {
   --background: #ffffff;
@@ -24,7 +22,7 @@
 
 @media (max-width: 1860px) and (min-width: 1532px) {
   .custom-red {
-    width: 550px;;
+    width: 550px;
   }
 }
 
@@ -57,8 +55,6 @@
     width: 380px;
     height: 380px;
     margin-top: 10px;
-    
-    
   }
 }
 
@@ -90,7 +86,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   color: var(--foreground);
   font-family: var(--font-albert-sans), sans-serif;
@@ -104,4 +99,14 @@ body {
   background-image: url('/a10b28.png');
   background-size: cover;
   background-position: center;
+}
+
+.uc-body {
+  background: url('/gradientehome.png') no-repeat center center !important;
+  background-size: cover;
+  min-height: 100dvh;
+  color: var(--foreground);
+  font-family: Albert sans;
+  overflow: hidden;
+  height: 100%;
 }
