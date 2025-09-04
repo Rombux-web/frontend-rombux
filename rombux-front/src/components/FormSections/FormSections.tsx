@@ -43,7 +43,7 @@ function FormSections() {
     if (!regexEmail.test(email)) newErrors.email = 'Correo con formato incorrecto';
     if (!regexTelefono.test(telefono)) newErrors.telefono = 'Número de teléfono incorrecto';
     if (!regexEmpresa.test(empresa)) newErrors.empresa = 'Rellena este campo obligatorio';
-    if (!regexMensaje.test(mensaje)) newErrors.mensaje = 'Mensaje inválido, mínimo 50 caracteres';
+    if (!regexMensaje.test(mensaje)) newErrors.mensaje = 'Mensaje inválido, mínimo 25 caracteres';
     if (!validarServicios(serviciosSeleccionados))
       newErrors.servicios = 'Debes seleccionar al menos un servicio';
     if (!captchaToken) newErrors.captcha = 'Por favor, verifica que no eres un robot.';
