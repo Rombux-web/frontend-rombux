@@ -19,6 +19,7 @@ function BotonesCirculares() {
             width={64}
             height={64}
             className='rounded-lg'
+            unoptimized
           />
           <div className='mt-[16px] max-lg:mt-[8px] font-medium text-[18px] leading-[24px] whitespace-nowrap'>
             Agenda una reunión
@@ -36,6 +37,7 @@ function BotonesCirculares() {
             width={64}
             height={64}
             className='rounded-lg'
+            unoptimized
           />
           <div className='mt-[16px] max-lg:mt-[8px] font-medium text-[18px] leading-[24px] whitespace-nowrap'>
             Envíanos un mensaje
@@ -55,6 +57,7 @@ function BotonesCirculares() {
             width={64}
             height={64}
             className='rounded-lg'
+            unoptimized
           />
           <div className='mt-2 max-lg:mt-[8px] font-medium text-[18px] leading-[24px]'>
             Chatea con Romy
