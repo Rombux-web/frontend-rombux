@@ -23,6 +23,7 @@ export default function Botones() {
             width={65}
             height={65}
             className='rounded-lg w-[65px] h-[65px]'
+            unoptimized
           />
           <div
             className='mt-[24px] text-center font-medium text-white 
@@ -44,6 +45,7 @@ export default function Botones() {
             width={65}
             height={65}
             className='rounded-lg w-[65px] h-[65px]'
+            unoptimized
           />
           <div
             className='mt-[24px] text-center font-medium text-white 
@@ -67,6 +69,7 @@ export default function Botones() {
             width={65}
             height={65}
             className='rounded-lg w-[65px] h-[65px]'
+            unoptimized
           />
           <div
             className='mt-[24px] text-center font-medium text-white 
