@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { JOTFORM_AI_AGENT_URL } from '@/config/urls';
 
 export default function Botones() {
   return (
@@ -53,30 +52,6 @@ export default function Botones() {
                         whitespace-nowrap lg:whitespace-normal'
           >
             Mándanos un <br className='hidden lg:block' /> email
-          </div>
-        </a>
-
-        {/* Chatea con Romy */}
-        <a
-          href={JOTFORM_AI_AGENT_URL}
-          target='_blank'
-          rel='noopener noreferrer'
-          className='flex flex-col items-center cursor-pointer'
-        >
-          <Image
-            src='/Chat.gif'
-            alt='Chat'
-            width={65}
-            height={65}
-            className='rounded-lg w-[65px] h-[65px]'
-            unoptimized
-          />
-          <div
-            className='mt-[24px] text-center font-medium text-white 
-                        text-[18px] leading-[24px] lg:leading-[28px] lg:w-auto 
-                        whitespace-nowrap lg:whitespace-normal'
-          >
-            Chatea con Romy, <br className='hidden lg:block' /> nuestra agente IA
           </div>
         </a>
       </div>
