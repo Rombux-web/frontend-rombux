@@ -4,6 +4,7 @@ import NavbarPrueba from '@/components/Navbar/Navbar';
 import './globals.css';
 import { Toaster } from 'react-hot-toast';
 import Script from 'next/script';
+import { JOTFORM_AI_AGENT_URL } from '@/config/urls';
 
 // Importa el CSS especial solo para UnderConstruction si lo necesitas globalmente (opcional)
 // import "@/components/UnderConstruction/uc_global.css";
@@ -37,7 +38,7 @@ export default function RootLayout({
       <head>
         {/* Cargar el widget del agente IA (Jotform). `afterInteractive` para que no bloquee render. */}
         <Script
-          src='https://cdn.jotfor.ms/agent/embedjs/0198fbee95d57c8b973951a2f79e7cc33aae/embed.js'
+          src={JOTFORM_AI_AGENT_URL}
           strategy='afterInteractive'
         />
       </head>
