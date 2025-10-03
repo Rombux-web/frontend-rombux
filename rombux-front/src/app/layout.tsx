@@ -3,6 +3,8 @@ import { Albert_Sans } from 'next/font/google';
 import NavbarPrueba from '@/components/Navbar/Navbar';
 import './globals.css';
 import { Toaster } from 'react-hot-toast';
+import Script from 'next/script';
+import { JOTFORM_AI_AGENT_URL } from '@/config/urls';
 
 // Importa el CSS especial solo para UnderConstruction si lo necesitas globalmente (opcional)
 // import "@/components/UnderConstruction/uc_global.css";
@@ -33,6 +35,13 @@ export default function RootLayout({
 
   return (
     <html lang='es'>
+      <head>
+        {/* Cargar el widget del agente IA (Jotform). `afterInteractive` para que no bloquee render. */}
+        <Script
+          src={JOTFORM_AI_AGENT_URL}
+          strategy='afterInteractive'
+        />
+      </head>
       <body className={`${albertSans.variable} antialiased${!goLive ? ' uc-body' : ''}`}>
         {/* Solo muestra la navbar y el toaster si está live */}
         {goLive && <NavbarPrueba />}
