@@ -67,7 +67,7 @@ export default function About_Us() {
         </div>
 
         {/* Grid única: siempre 3 columnas en md+ */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-y-24 gap-x-10 items-start mt-[189px] mx-[104px] max-lg:mx-[10px] max-2xl:mt-[100px] max-sm:mt-[80px]'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-y-24 gap-x-10 items-start mt-[189px] mx-[104px] max-lg:mx-[10px] max-2xl:mt-[100px] max-sm:mt-[80px] max-sm:mb-15'>
           {teamMembers.map((member) => (
             <div
               key={member.name}
