@@ -30,20 +30,43 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Detecta si la página en construcción debe mostrarse
   const goLive = process.env.NEXT_PUBLIC_GO_LIVE === 'true';
 
   return (
     <html lang='es'>
       <head>
+        {/* Google Tag Manager */}
+        <Script
+          id='gtm-script'
+          strategy='afterInteractive'
+        >
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-K6Z537GS');`}
+        </Script>
+        {/* End Google Tag Manager */}
+
         {/* Cargar el widget del agente IA (Jotform). `afterInteractive` para que no bloquee render. */}
         <Script
           src={JOTFORM_AI_AGENT_URL}
           strategy='afterInteractive'
         />
       </head>
+
       <body className={`${albertSans.variable} antialiased${!goLive ? ' uc-body' : ''}`}>
-        {/* Solo muestra la navbar y el toaster si está live */}
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src='https://www.googletagmanager.com/ns.html?id=GTM-K6Z537GS'
+            height='0'
+            width='0'
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+
         {goLive && <NavbarPrueba />}
         {goLive && <Toaster position='bottom-left' />}
         {children}
