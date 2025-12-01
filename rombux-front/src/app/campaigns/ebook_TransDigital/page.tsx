@@ -70,10 +70,12 @@ export default function EbookLanding() {
         <h1 className='text-black text-4xl md:text-5xl font-light mb-6'>
           Actualizá tu negocio al entorno digital
         </h1>
+        <br />
         <p className='text-[#D81FB9] text-xl md:text-2xl font-medium mb-6'>
           Comprendé las áreas clave que impulsan el crecimiento de tu negocio online.
         </p>
-        <p className='text-gray-700 mb-4 font-medium text-base'>
+
+        <p className='text-gray-700 mb-4 font-medium text-lg mt-6'>
           Completá tus datos y descargá el e-book Transformación Digital
         </p>
       </div>
