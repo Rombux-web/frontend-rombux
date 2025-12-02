@@ -33,7 +33,7 @@ export default function EbookLanding() {
 
     if (Object.keys(newErrors).length > 0) return;
 
-    // Construimos el body según lo que espera el backend
+    // Body esperado por /campaigns/submit
     const body = {
       campaign: 'ebook_TransDigital',
       payload: {
@@ -49,20 +49,20 @@ export default function EbookLanding() {
     const toastId = toast.loading('Enviando...');
     try {
       const result = await submitCampaignForm(body);
-      // result es la entidad CampaignSubmission devuelta por el backend
+      // Si el backend devolvió la entidad (id) o marcó processed, consideramos OK
       if (result && (result.processed === true || result.id)) {
         toast.success('¡Datos enviados!', { id: toastId, duration: 4000 });
-        // limpiar
+        // limpiar campos
         setNombre('');
         setApellido('');
         setEmail('');
         setTelefono('');
         setCaptchaToken(null);
         setErrors({});
-        // redirigir solo si el backend respondió OK
+        // redirigir
         router.push('/thankyou_campaigns/thankyou_ebook_TransDigital');
       } else {
-        // caso raro: backend respondió pero no marcó processed; lo tratamos como éxito parcial
+        // éxito parcial (recibido pero no procesado)
         toast.success('Envío recibido (pendiente de procesamiento).', { id: toastId, duration: 4000 });
         setNombre('');
         setApellido('');
@@ -76,6 +76,11 @@ export default function EbookLanding() {
       toast.error('Error al enviar el formulario', { id: toastId });
       console.error(error);
     }
+  };
+
+  const goToThankYou = () => {
+    // Modo revisión: navegar sin enviar ni validar
+    router.push('/thankyou_campaigns/thankyou_ebook_TransDigital');
   };
 
   return (
