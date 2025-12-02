@@ -1,13 +1,9 @@
 import type { Metadata } from 'next';
 import { Albert_Sans } from 'next/font/google';
-import NavbarPrueba from '@/components/Navbar/Navbar';
 import './globals.css';
-import { Toaster } from 'react-hot-toast';
 import Script from 'next/script';
 import { JOTFORM_AI_AGENT_URL } from '@/config/urls';
-
-// Importa el CSS especial solo para UnderConstruction si lo necesitas globalmente (opcional)
-// import "@/components/UnderConstruction/uc_global.css";
+import ClientChrome from '@/components/ClientChrome/ClientChrome';
 
 const albertSans = Albert_Sans({
   subsets: ['latin'],
@@ -20,16 +16,11 @@ export const metadata: Metadata = {
   title: 'Rombux | Soluciones 360° en Marketing, Data e IA para Empresas',
   description:
     'Impulsamos a tu empresa en el universo digital con Servicios Integrales de Benchmarking, Branding, Marketing Digital, Growth, Data e IA, 100% personalizados.',
-  icons: {
-    icon: '/isotipo.png',
-  },
+  icons: { icon: '/isotipo.png' },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // goLive controla si se muestra la capa pública
   const goLive = process.env.NEXT_PUBLIC_GO_LIVE === 'true';
 
   return (
@@ -46,17 +37,9 @@ export default function RootLayout({
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-K6Z537GS');`}
         </Script>
-        {/* End Google Tag Manager */}
-
-        {/* Cargar el widget del agente IA (Jotform). `afterInteractive` para que no bloquee render. */}
-        <Script
-          src={JOTFORM_AI_AGENT_URL}
-          strategy='afterInteractive'
-        />
+        {/* Script del agente IA solo si no es campaña (lo controlará ClientChrome) */}
       </head>
-
       <body className={`${albertSans.variable} antialiased${!goLive ? ' uc-body' : ''}`}>
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src='https://www.googletagmanager.com/ns.html?id=GTM-K6Z537GS'
@@ -65,10 +48,9 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
 
-        {goLive && <NavbarPrueba />}
-        {goLive && <Toaster position='bottom-left' />}
+        {/* ClientChrome decide si mostrar Navbar, Toaster y el Script del agente según la ruta */}
+        <ClientChrome goLive={goLive} />
         {children}
       </body>
     </html>
