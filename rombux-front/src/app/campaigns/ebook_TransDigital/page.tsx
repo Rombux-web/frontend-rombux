@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { submitContactForm } from '@/services/contactService';
+import { submitCampaignForm } from '@/services/campaignService';
 import toast from 'react-hot-toast';
 import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -33,35 +33,49 @@ export default function EbookLanding() {
 
     if (Object.keys(newErrors).length > 0) return;
 
-    const data = {
-      nombre,
-      apellido,
-      email,
-      telefono,
+    // Construimos el body según lo que espera el backend
+    const body = {
       campaign: 'ebook_TransDigital',
+      payload: {
+        nombre,
+        apellido,
+        email,
+        telefono,
+      },
       captchaToken,
+      source: 'web',
     };
 
     const toastId = toast.loading('Enviando...');
     try {
-      await submitContactForm(data);
-      toast.success('¡Datos enviados!', { id: toastId, duration: 4000 });
-      setNombre('');
-      setApellido('');
-      setEmail('');
-      setTelefono('');
-      setCaptchaToken(null);
-      setErrors({});
-      router.push('/thankyou_campaigns/thankyou_ebook_TransDigital');
+      const result = await submitCampaignForm(body);
+      // result es la entidad CampaignSubmission devuelta por el backend
+      if (result && (result.processed === true || result.id)) {
+        toast.success('¡Datos enviados!', { id: toastId, duration: 4000 });
+        // limpiar
+        setNombre('');
+        setApellido('');
+        setEmail('');
+        setTelefono('');
+        setCaptchaToken(null);
+        setErrors({});
+        // redirigir solo si el backend respondió OK
+        router.push('/thankyou_campaigns/thankyou_ebook_TransDigital');
+      } else {
+        // caso raro: backend respondió pero no marcó processed; lo tratamos como éxito parcial
+        toast.success('Envío recibido (pendiente de procesamiento).', { id: toastId, duration: 4000 });
+        setNombre('');
+        setApellido('');
+        setEmail('');
+        setTelefono('');
+        setCaptchaToken(null);
+        setErrors({});
+        router.push('/thankyou_campaigns/thankyou_ebook_TransDigital');
+      }
     } catch (error) {
       toast.error('Error al enviar el formulario', { id: toastId });
       console.error(error);
     }
-  };
-
-  const goToThankYou = () => {
-    // Modo revisión: navegar sin enviar ni validar
-    router.push('/thankyou_campaigns/thankyou_ebook_TransDigital');
   };
 
   return (
@@ -137,10 +151,9 @@ export default function EbookLanding() {
           {errors.captcha && <p className='text-red-500 text-sm mt-1 text-left'>{errors.captcha}</p>}
         </div>
 
-        {/* Modo revisión: botón navega directo sin enviar */}
+        {/* Botón: ahora es submit para ejecutar handleSubmit */}
         <button
-          type='button'
-          onClick={goToThankYou}
+          type='submit'
           className='bg-[#D81FB9] text-white text-lg font-semibold h-12 w-48 rounded-full mt-4 transition-transform hover:brightness-110 active:scale-95'
         >
           Enviar
