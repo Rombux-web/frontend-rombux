@@ -1,8 +1,7 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 /**
- * Enviar envío de campaña al backend.
- * Body esperado por el backend:
+ * Body esperado por backend /campaigns/submit:
  * {
  *   campaign: string,
  *   payload: Record<string, unknown>,

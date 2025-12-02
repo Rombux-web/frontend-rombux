@@ -42,7 +42,8 @@ export default function EbookLanding() {
         email,
         telefono,
       },
-      captchaToken,
+      // captchaToken está validado arriba (no null aquí), pero por seguridad lo convertimos a string
+      captchaToken: captchaToken as string,
       source: 'web',
     };
 
@@ -162,6 +163,15 @@ export default function EbookLanding() {
           className='bg-[#D81FB9] text-white text-lg font-semibold h-12 w-48 rounded-full mt-4 transition-transform hover:brightness-110 active:scale-95'
         >
           Enviar
+        </button>
+
+        {/* Botón de revisión (opc): deja para pruebas locales */}
+        <button
+          type='button'
+          onClick={goToThankYou}
+          className='mt-4 text-sm underline text-gray-500'
+        >
+          Ir a thankyou (sin enviar)
         </button>
       </form>
     </div>
